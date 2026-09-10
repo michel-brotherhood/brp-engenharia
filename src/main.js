@@ -81,7 +81,11 @@ function initPrefetch() {
     link.as = 'document';
     document.head.appendChild(link);
   };
-  document.querySelectorAll('a[href$=".html"]').forEach((a) => {
+  const origin = window.location.origin;
+  document.querySelectorAll('a[href^="/"]').forEach((a) => {
+    // Only same-origin, non-hash, non-mailto/tel routes worth prefetching
+    if (!a.href.startsWith(origin) || a.hash) return;
+    if (a.getAttribute('href') === '/') return;
     a.addEventListener('mouseenter', () => prefetch(a.href), { once: true, passive: true });
     a.addEventListener('focus', () => prefetch(a.href), { once: true, passive: true });
   });

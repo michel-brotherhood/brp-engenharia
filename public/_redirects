@@ -1,37 +1,40 @@
-# Netlify redirects for BPF Engenharia — preserve legacy URLs
-# Legacy segment pages → new /obras.html?setor=…
-/hospitais-e-clinicas             /obras.html?setor=hospitais-e-clinicas                            301
-/hospitais-e-clinicas/*           /obras.html?setor=hospitais-e-clinicas                            301
-/residencias-alto-padrao          /obras.html?setor=residencias-alto-padrao                         301
-/residencias-alto-padrao/*        /obras.html?setor=residencias-alto-padrao                         301
-/concessionarias                  /obras.html?setor=concessionarias                                 301
-/concessionarias/*                /obras.html?setor=concessionarias                                 301
-/restauracoes                     /obras.html?setor=restauracoes                                    301
-/restauracoes/*                   /obras.html?setor=restauracoes                                    301
-/fotovoltaicas                    /obras.html?setor=fotovoltaicas                                   301
-/fotovoltaicas/*                  /obras.html?setor=fotovoltaicas                                   301
-/hoteis                           /obras.html?setor=hoteis                                          301
-/hoteis/*                         /obras.html?setor=hoteis                                          301
-/escolas                          /obras.html?setor=escolas                                         301
-/escolas/*                        /obras.html?setor=escolas                                         301
-/shoppings-e-lojas                /obras.html?setor=shoppings-e-lojas                               301
-/shoppings-e-lojas/*              /obras.html?setor=shoppings-e-lojas                               301
-/restaurantes                     /obras.html?setor=restaurantes                                    301
-/restaurantes/*                   /obras.html?setor=restaurantes                                    301
-/torres-comerciais-e-residenciais /obras.html?setor=torres-comerciais-e-residenciais                301
-/torres-comerciais-e-residenciais/* /obras.html?setor=torres-comerciais-e-residenciais              301
-/obras-industriais-de-infraestrutura-e-galpoes   /obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes  301
-/obras-industriais-de-infraestrutura-e-galpoes/* /obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes  301
+# Cloudflare Pages — redirects and pretty-URL rewrites for BPF Engenharia
+# Syntax reference: https://developers.cloudflare.com/pages/configuration/redirects/
+# Order matters: first match wins. Splats are supported with :splat.
 
-# Legacy work pages
-/obrasemandamento                 /obras-em-andamento.html                                          301
-/obrasemandamento/*               /obras-em-andamento.html                                          301
-/obras                            /obras.html                                                        301
-/obrasnovas                       /obras.html                                                        301
-/obrasnovas/*                     /obras.html                                                        301
-
-# Pretty URLs → .html
+# ---- Pretty URLs (200 = internal rewrite; keeps the URL as typed) ----
 /sobre                            /sobre.html                                                        200
 /solucoes                         /solucoes.html                                                     200
+/obras                            /obras.html                                                        200
+/obras-em-andamento               /obras-em-andamento.html                                           200
 /clientes                         /clientes.html                                                     200
 /contato                          /contato.html                                                      200
+
+# ---- Legacy WordPress URLs (301 permanent) ----
+/hospitais-e-clinicas             /obras.html?setor=hospitais-e-clinicas                             301
+/hospitais-e-clinicas/*           /obras.html?setor=hospitais-e-clinicas                             301
+/residencias-alto-padrao          /obras.html?setor=residencias-alto-padrao                          301
+/residencias-alto-padrao/*        /obras.html?setor=residencias-alto-padrao                          301
+/concessionarias                  /obras.html?setor=concessionarias                                  301
+/concessionarias/*                /obras.html?setor=concessionarias                                  301
+/restauracoes                     /obras.html?setor=restauracoes                                     301
+/restauracoes/*                   /obras.html?setor=restauracoes                                     301
+/fotovoltaicas                    /obras.html?setor=fotovoltaicas                                    301
+/fotovoltaicas/*                  /obras.html?setor=fotovoltaicas                                    301
+/hoteis                           /obras.html?setor=hoteis                                           301
+/hoteis/*                         /obras.html?setor=hoteis                                           301
+/escolas                          /obras.html?setor=escolas                                          301
+/escolas/*                        /obras.html?setor=escolas                                          301
+/shoppings-e-lojas                /obras.html?setor=shoppings-e-lojas                                301
+/shoppings-e-lojas/*              /obras.html?setor=shoppings-e-lojas                                301
+/restaurantes                     /obras.html?setor=restaurantes                                     301
+/restaurantes/*                   /obras.html?setor=restaurantes                                     301
+/torres-comerciais-e-residenciais /obras.html?setor=torres-comerciais-e-residenciais                 301
+/torres-comerciais-e-residenciais/* /obras.html?setor=torres-comerciais-e-residenciais               301
+/obras-industriais-de-infraestrutura-e-galpoes    /obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes  301
+/obras-industriais-de-infraestrutura-e-galpoes/*  /obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes  301
+
+/obrasemandamento                 /obras-em-andamento.html                                           301
+/obrasemandamento/*               /obras-em-andamento.html                                           301
+/obrasnovas                       /obras.html                                                        301
+/obrasnovas/*                     /obras.html                                                        301
