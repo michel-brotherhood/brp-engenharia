@@ -12,7 +12,9 @@
 
   --c-navy-500: #24509A;     /* azul da marca */
   --c-navy-400: #3A6EC2;
-  --c-tech-400: #2DA9E1;     /* azul técnico da marca */
+  --c-tech-500: #2DA9E1;     /* azul técnico oficial da marca — acento em fundo escuro */
+  --c-tech-600: #1F86B4;     /* variação escurecida — acento em fundo claro (AA) */
+  --c-tech-400: #2DA9E1;     /* alias legado */
   --c-tech-300: #6BC5EB;
 
   --c-graphite-700: #26303F;
@@ -25,7 +27,7 @@
   --c-paper-50:  #FAF8F3;
   --c-mineral:   #FFFFFF;
 
-  --c-signal-500: #E85A1F;   /* laranja de sinalização */
+  --c-signal-500: #E85A1F;   /* laranja — reservado a estados de erro/urgência (form invalid) */
   --c-signal-400: #F27538;
   --c-signal-300: #F9A672;
 
@@ -38,8 +40,11 @@
   --fg-on-dark-mute: #9AA6BD;
   --fg-on-paper: #12182A;
   --fg-on-paper-mute: #4A5468;
-  --accent: var(--c-signal-500);
-  --accent-soft: var(--c-signal-400);
+  --accent-on-dark: var(--c-tech-500);    /* tech blue #2DA9E1 — AAA em fundo escuro */
+  --accent-on-paper: var(--c-tech-600);   /* tech blue escuro #1F86B4 — AA em fundo paper */
+  --accent: var(--accent-on-dark);        /* default: fundo escuro */
+  --accent-soft: var(--c-tech-300);       /* hover */
+  --danger: var(--c-signal-500);          /* semântica de erro */
   --rule-dark: rgba(231, 235, 243, 0.12);
   --rule-paper: rgba(18, 24, 42, 0.12);
   --rule-tech:  rgba(45, 169, 225, 0.35);

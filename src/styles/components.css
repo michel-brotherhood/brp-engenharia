@@ -597,8 +597,8 @@
 }
 .field textarea { min-height: 140px; resize: vertical; }
 .field input:hover, .field textarea:hover, .field select:hover { border-color: var(--accent); }
-.field.err input, .field.err textarea, .field.err select { border-color: var(--c-signal-500); }
-.field .err-msg { color: var(--c-signal-500); font-size: var(--step--1); }
+.field.err input, .field.err textarea, .field.err select { border-color: var(--danger); }
+.field .err-msg { color: var(--danger); font-size: var(--step--1); }
 
 .form-row {
   display: grid; gap: var(--sp-4);
@@ -616,11 +616,11 @@
 .form-status {
   padding: var(--sp-4);
   border-left: 3px solid var(--accent);
-  background: rgba(232, 90, 31, 0.06);
+  background: rgba(45, 169, 225, 0.06);
   font-size: var(--step--1);
 }
 .form-status.success { border-color: #2FB360; background: rgba(47, 179, 96, 0.08); }
-.form-status.error   { border-color: #E85A1F; background: rgba(232, 90, 31, 0.08); }
+.form-status.error   { border-color: var(--danger); background: rgba(232, 90, 31, 0.08); }
 
 /* Footer */
 .footer {
@@ -658,6 +658,35 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--fg-on-dark-mute);
+}
+
+/* Atmospheric image layer — <img> injected by main.js sits BEHIND the SVG.
+   The filter+blend flattens the "stock photo" look into a navy texture that
+   matches the design system. If the image 404s, JS removes it silently and
+   the SVG remains the visible layer. */
+.has-image { position: relative; }
+.has-image > img[data-atmos] {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  filter: saturate(0.28) brightness(0.75) contrast(1.15) hue-rotate(-6deg);
+  mix-blend-mode: luminosity;
+  pointer-events: none;
+  z-index: 0;
+}
+.has-image > svg { position: relative; z-index: 1; }
+
+/* Hero: keep the crop taller, slightly stronger visibility */
+.hero__media-frame.has-image > img[data-atmos] {
+  opacity: 0.55;
+  filter: saturate(0.35) brightness(0.82) contrast(1.1) hue-rotate(-8deg);
+}
+
+/* Ambient (CTA final): very subtle backdrop */
+.cta-final__field.has-image > img[data-atmos] {
+  opacity: 0.28;
+  filter: saturate(0.2) brightness(0.6) contrast(1.2) hue-rotate(-8deg);
 }
 
 /* Reveal (motion) */
