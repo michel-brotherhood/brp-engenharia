@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="BPF">
+<rect width="512" height="512" rx="104" fill="#24509A"/><g transform="translate(48 111) scale(.36)"><g id="bpf-mark">
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M40 40H248C316 40 352 75 352 130c0 35-17 61-49 76 37 15 56 44 56 84 0 61-39 96-111 96H40V40zm78 70v61h119c23 0 36-10 36-30s-13-31-36-31H118zm0 128v77h124c26 0 40-13 40-38 0-26-14-39-40-39H118z"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M402 40h201c86 0 137 45 137 121 0 78-51 124-137 124H480v101h-78V40zm78 70v105h112c43 0 67-18 67-53 0-34-24-52-67-52H480z"/>
+  <path fill="#FFFFFF" d="M790 40h330l-58 73H868v66h157l-55 70H868v137h-78V40z"/>
+  <path fill="#2DA9E1" d="M1043 40h77l-58 73h-77z"/>
+</g></g>
+</svg>
