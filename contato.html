@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -29,8 +29,13 @@
           <a href="/obras">Obras</a><a href="/obras-em-andamento">Andamento</a>
           <a href="/clientes">Clientes</a><a href="/contato" aria-current="page">Contato</a>
         </nav>
-        <a class="nav__cta" href="#form">Falar sobre um projeto</a>
-        <button class="nav__burger" data-burger aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu"><span></span></button>
+        <div class="nav__actions">
+
+          <a class="nav__cta" href="#form">Falar sobre um projeto</a>
+
+          <button class="nav__burger" data-burger aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu"><span></span></button>
+
+        </div>
       </div>
     </header>
     <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
@@ -43,7 +48,7 @@
     </div>
 
     <main id="main">
-      <section class="hero" style="min-height:60vh; min-height:60svh;" aria-labelledby="page-title">
+      <section class="hero hero--sub" aria-labelledby="page-title">
         <div class="hero__field" aria-hidden="true"><svg data-paint="hero-field"></svg></div>
         <div class="container hero__inner">
           <div class="hero__copy reveal">
@@ -73,7 +78,6 @@
                 </div>
               </div>
               <div class="stack" style="gap:1rem; margin-top: 2rem;">
-                <p><strong>Endereço:</strong> <span class="mono" style="color:var(--fg-on-paper-mute);">[CONFIRMAR LOCALIZAÇÃO]</span> — informação não publicada no site atual.</p>
                 <p style="color:var(--fg-on-paper-mute);">Prefere ligar? A equipe está disponível para conversar sobre o projeto pelo telefone acima.</p>
               </div>
             </div>

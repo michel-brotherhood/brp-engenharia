@@ -51,7 +51,8 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-p { text-wrap: pretty; max-width: 68ch; }
+p { text-wrap: pretty; max-width: 100%; }
+@media (min-width: 640px) { p { max-width: 68ch; } }
 .mono { font-family: var(--font-mono); letter-spacing: 0.02em; }
 
 /* Skip link */
