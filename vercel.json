@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/hospitais-e-clinicas/:path*", "destination": "/obras.html?setor=hospitais-e-clinicas", "permanent": true },
+    { "source": "/residencias-alto-padrao/:path*", "destination": "/obras.html?setor=residencias-alto-padrao", "permanent": true },
+    { "source": "/concessionarias/:path*", "destination": "/obras.html?setor=concessionarias", "permanent": true },
+    { "source": "/restauracoes/:path*", "destination": "/obras.html?setor=restauracoes", "permanent": true },
+    { "source": "/fotovoltaicas/:path*", "destination": "/obras.html?setor=fotovoltaicas", "permanent": true },
+    { "source": "/hoteis/:path*", "destination": "/obras.html?setor=hoteis", "permanent": true },
+    { "source": "/escolas/:path*", "destination": "/obras.html?setor=escolas", "permanent": true },
+    { "source": "/shoppings-e-lojas/:path*", "destination": "/obras.html?setor=shoppings-e-lojas", "permanent": true },
+    { "source": "/restaurantes/:path*", "destination": "/obras.html?setor=restaurantes", "permanent": true },
+    { "source": "/torres-comerciais-e-residenciais/:path*", "destination": "/obras.html?setor=torres-comerciais-e-residenciais", "permanent": true },
+    { "source": "/obras-industriais-de-infraestrutura-e-galpoes/:path*", "destination": "/obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes", "permanent": true },
+    { "source": "/obrasemandamento/:path*", "destination": "/obras-em-andamento.html", "permanent": true },
+    { "source": "/obrasnovas/:path*", "destination": "/obras.html", "permanent": true }
+  ]
+}

@@ -31,6 +31,23 @@ export function initNav() {
   burger.addEventListener('click', () => setOpen(menu.dataset.open !== 'true'));
   close?.addEventListener('click', () => setOpen(false));
   menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+  // Focus trap: keep Tab cycling inside the open menu
+  menu.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || menu.dataset.open !== 'true') return;
+    const focusables = menu.querySelectorAll('a[href], button:not([disabled])');
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu.dataset.open === 'true') setOpen(false);
   });
@@ -102,29 +119,56 @@ export function initForm() {
     status.textContent = text;
     status.hidden = !text;
   };
+  const setFieldError = (name, msg) => {
+    const field = form.querySelector(`.field[data-field="${name}"]`);
+    if (!field) return;
+    field.classList.toggle('err', Boolean(msg));
+    let m = field.querySelector('.err-msg');
+    if (msg) {
+      if (!m) {
+        m = document.createElement('span');
+        m.className = 'err-msg';
+        m.setAttribute('role', 'alert');
+        field.appendChild(m);
+      }
+      m.textContent = msg;
+    } else if (m) {
+      m.remove();
+    }
+  };
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     setStatus('', '');
     const formData = new FormData(form);
     let hasError = false;
-    form.querySelectorAll('.field').forEach((f) => f.classList.remove('err'));
+    let firstInvalid = null;
 
-    const required = ['name', 'email', 'message'];
-    for (const key of required) {
+    const required = {
+      name: 'Informe o seu nome.',
+      email: 'Informe um e-mail para contato.',
+      message: 'Escreva uma mensagem para começar a conversa.',
+    };
+    for (const [key, msg] of Object.entries(required)) {
       const val = String(formData.get(key) || '').trim();
       if (!val) {
         hasError = true;
-        form.querySelector(`.field[data-field="${key}"]`)?.classList.add('err');
+        setFieldError(key, msg);
+        firstInvalid = firstInvalid || form.querySelector(`.field[data-field="${key}"] input, .field[data-field="${key}"] textarea`);
+      } else {
+        setFieldError(key, '');
       }
     }
     const email = String(formData.get('email') || '');
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       hasError = true;
-      form.querySelector(`.field[data-field="email"]`)?.classList.add('err');
+      setFieldError('email', 'E-mail em formato inválido.');
+      firstInvalid = firstInvalid || form.querySelector('.field[data-field="email"] input');
     }
 
     if (hasError) {
       setStatus('error', 'Confira os campos destacados para continuar.');
+      firstInvalid?.focus();
       return;
     }
 
