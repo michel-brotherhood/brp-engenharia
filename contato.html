@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Contato — BPF Engenharia</title>
+    <meta name="description" content="Fale com a BPF Engenharia sobre o próximo projeto, reforma, retrofit ou solução de energia." />
+    <meta name="theme-color" content="#0A1020" />
+    <link rel="canonical" href="https://bpfengenharia.eng.br/contato.html" />
+    <link rel="icon" href="/brand/favicon.ico" sizes="any" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contato — BPF Engenharia" />
+    <meta property="og:description" content="Fale com a BPF Engenharia sobre o próximo projeto, reforma, retrofit ou solução de energia." />
+    <meta property="og:url" content="https://bpfengenharia.eng.br/contato.html" />
+    <meta property="og:image" content="/brand/bpf-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Ir para o conteúdo</a>
+    <header class="nav" data-nav>
+      <div class="container nav__inner">
+        <a class="nav__brand" href="/"><img src="/brand/bpf-logo-horizontal-white.svg" alt="BPF Engenharia" width="180" height="40" /><span class="brand-txt">Engenharia de instalações</span></a>
+        <nav class="nav__links" aria-label="Navegação principal">
+          <a href="/sobre.html">Sobre</a><a href="/solucoes.html">Soluções</a>
+          <a href="/obras.html">Obras</a><a href="/obras-em-andamento.html">Andamento</a>
+          <a href="/clientes.html">Clientes</a><a href="/contato.html" aria-current="page">Contato</a>
+        </nav>
+        <a class="nav__cta" href="#form">Falar sobre um projeto</a>
+        <button class="nav__burger" data-burger aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu"><span></span></button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+      <div class="mobile-menu__top"><img src="/brand/bpf-logo-horizontal-white.svg" alt="BPF Engenharia" height="32" loading="lazy" /><button data-menu-close class="pill">Fechar ✕</button></div>
+      <nav class="mobile-menu__list">
+        <a href="/sobre.html">Sobre <span class="num">01</span></a><a href="/solucoes.html">Soluções <span class="num">02</span></a>
+        <a href="/obras.html">Obras <span class="num">03</span></a><a href="/obras-em-andamento.html">Andamento <span class="num">04</span></a>
+        <a href="/clientes.html">Clientes <span class="num">05</span></a><a href="/contato.html">Contato <span class="num">06</span></a>
+      </nav>
+    </div>
+
+    <main id="main">
+      <section class="hero" style="min-height:60vh; min-height:60svh;" aria-labelledby="page-title">
+        <div class="hero__field" aria-hidden="true"><svg data-paint="hero-field"></svg></div>
+        <div class="container hero__inner">
+          <div class="hero__copy reveal">
+            <div class="hero__label"><span class="code">CAP-11 / CONTATO</span><span class="rule"></span><span class="kind">Vamos conversar</span></div>
+            <h1 id="page-title" class="hero__title">O próximo projeto começa com uma <span class="accent">conversa</span>.</h1>
+            <p class="hero__lead">Conte um pouco sobre o empreendimento, a necessidade técnica ou o momento da obra. A equipe da BPF orienta o próximo passo.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section paper" id="form">
+        <div class="container">
+          <div class="editorial">
+            <div class="reveal">
+              <div class="contact-strip" style="border-top:0; padding-top:0;">
+                <div class="contact-strip__item">
+                  <span class="label">E-mail</span>
+                  <a class="value" href="mailto:contato@bpfengenharia.eng.br">contato@bpfengenharia.eng.br</a>
+                </div>
+                <div class="contact-strip__item">
+                  <span class="label">Telefone</span>
+                  <a class="value" href="tel:+552122105298">(21) 2210-5298</a>
+                </div>
+                <div class="contact-strip__item">
+                  <span class="label">Webmail</span>
+                  <a class="value" href="https://webmail-seguro.com.br/bpfengenharia.eng.br/" target="_blank" rel="noopener">Acessar ↗</a>
+                </div>
+              </div>
+              <div class="stack" style="gap:1rem; margin-top: 2rem;">
+                <p><strong>Endereço:</strong> <span class="mono" style="color:var(--fg-on-paper-mute);">[CONFIRMAR LOCALIZAÇÃO]</span> — informação não publicada no site atual.</p>
+                <p style="color:var(--fg-on-paper-mute);">Prefere ligar? A equipe está disponível para conversar sobre o projeto pelo telefone acima.</p>
+              </div>
+            </div>
+            <div class="reveal">
+              <form class="form" data-form novalidate>
+                <div class="form-row">
+                  <div class="field" data-field="name"><label for="f-name">Nome*</label><input id="f-name" name="name" type="text" autocomplete="name" required /></div>
+                  <div class="field" data-field="company"><label for="f-company">Empresa</label><input id="f-company" name="company" type="text" autocomplete="organization" /></div>
+                </div>
+                <div class="form-row">
+                  <div class="field" data-field="email"><label for="f-email">E-mail*</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+                  <div class="field" data-field="phone"><label for="f-phone">Telefone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" /></div>
+                </div>
+                <div class="form-row">
+                  <div class="field" data-field="project_type">
+                    <label for="f-type">Tipo de empreendimento</label>
+                    <select id="f-type" name="project_type">
+                      <option value="">Selecionar…</option>
+                      <option>Residencial de alto padrão</option>
+                      <option>Torre residencial ou comercial</option>
+                      <option>Hospital / clínica</option>
+                      <option>Escola</option>
+                      <option>Hotel</option>
+                      <option>Shopping / loja</option>
+                      <option>Concessionária</option>
+                      <option>Restaurante</option>
+                      <option>Restauração / patrimônio</option>
+                      <option>Instalação fotovoltaica</option>
+                      <option>Obra industrial / galpão</option>
+                      <option>Outro</option>
+                    </select>
+                  </div>
+                  <div class="field" data-field="stage">
+                    <label for="f-stage">Etapa da obra</label>
+                    <select id="f-stage" name="stage">
+                      <option value="">Selecionar…</option>
+                      <option>Concepção / projeto</option>
+                      <option>Compatibilização técnica</option>
+                      <option>Início de obra</option>
+                      <option>Obra em andamento</option>
+                      <option>Retrofit / ampliação</option>
+                      <option>Ainda avaliando</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field" data-field="message">
+                  <label for="f-message">Mensagem*</label>
+                  <textarea id="f-message" name="message" required placeholder="Conte um pouco sobre o projeto, a obra ou a dúvida técnica."></textarea>
+                </div>
+                <div class="form-note">
+                  Nenhum endpoint público está configurado. Ao enviar, o site abre o cliente de e-mail com sua mensagem pronta para <strong>contato@bpfengenharia.eng.br</strong>.
+                </div>
+                <div class="form-status" data-form-status role="status" aria-live="polite" hidden></div>
+                <div>
+                  <button type="submit" class="btn primary">Enviar mensagem <span class="arrow" aria-hidden="true">→</span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand"><img src="/brand/bpf-logo-horizontal-white.svg" alt="BPF Engenharia" height="42" loading="lazy" /><p style="color:var(--fg-on-dark-mute); max-width:42ch;">Engenharia de instalações e eficiência energética.</p></div>
+          <div><h4>Navegação</h4><ul><li><a href="/sobre.html">Sobre</a></li><li><a href="/solucoes.html">Soluções</a></li><li><a href="/obras.html">Obras</a></li><li><a href="/obras-em-andamento.html">Andamento</a></li><li><a href="/clientes.html">Clientes</a></li><li><a href="/contato.html">Contato</a></li></ul></div>
+          <div><h4>Contato</h4><ul><li><a href="mailto:contato@bpfengenharia.eng.br">contato@bpfengenharia.eng.br</a></li><li><a href="tel:+552122105298">(21) 2210-5298</a></li><li><a href="https://webmail-seguro.com.br/bpfengenharia.eng.br/" target="_blank" rel="noopener">Webmail seguro ↗</a></li></ul></div>
+          <div><h4>Segmentos</h4><ul><li><a href="/obras.html?setor=hospitais-e-clinicas">Hospitais e clínicas</a></li><li><a href="/obras.html?setor=fotovoltaicas">Fotovoltaicas</a></li><li><a href="/obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes">Indústria e galpões</a></li></ul></div>
+        </div>
+        <div class="footer__bottom"><span>© <span data-year>2026</span> BPF Engenharia. Todos os direitos reservados.</span></div>
+      </div>
+    </footer>
+  </body>
+</html>

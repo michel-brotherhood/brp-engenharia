@@ -1,0 +1,8 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Design system */
+@import './tokens.css';
+@import './base.css';
+@import './hero.css';
+@import './components.css';

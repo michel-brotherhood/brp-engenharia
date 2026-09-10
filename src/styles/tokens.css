@@ -1,0 +1,102 @@
+/* BPF ENGENHARIA — Design tokens
+   Paleta editorial: navy quase preto, grafite, papel, laranja de sinalização.
+   O laranja é acento — nunca fundo dominante. */
+
+:root {
+  /* Color scales */
+  --c-ink-950: #060911;      /* fundo mais escuro do hero */
+  --c-ink-900: #0A1020;      /* navy quase preto — fundo principal escuro */
+  --c-ink-800: #0F1A31;
+  --c-ink-700: #172642;
+  --c-ink-600: #24344F;
+
+  --c-navy-500: #24509A;     /* azul da marca */
+  --c-navy-400: #3A6EC2;
+  --c-tech-400: #2DA9E1;     /* azul técnico da marca */
+  --c-tech-300: #6BC5EB;
+
+  --c-graphite-700: #26303F;
+  --c-graphite-500: #4A5568;
+  --c-graphite-400: #6B7383;
+  --c-graphite-300: #98A0AE;
+  --c-graphite-200: #C7CCD4;
+
+  --c-paper-100: #F4F1EA;    /* marfim/papel */
+  --c-paper-50:  #FAF8F3;
+  --c-mineral:   #FFFFFF;
+
+  --c-signal-500: #E85A1F;   /* laranja de sinalização */
+  --c-signal-400: #F27538;
+  --c-signal-300: #F9A672;
+
+  /* Semantic */
+  --bg-dark: var(--c-ink-900);
+  --bg-deep: var(--c-ink-950);
+  --bg-paper: var(--c-paper-100);
+  --bg-paper-alt: var(--c-paper-50);
+  --fg-on-dark: #E7EBF3;
+  --fg-on-dark-mute: #9AA6BD;
+  --fg-on-paper: #12182A;
+  --fg-on-paper-mute: #4A5468;
+  --accent: var(--c-signal-500);
+  --accent-soft: var(--c-signal-400);
+  --rule-dark: rgba(231, 235, 243, 0.12);
+  --rule-paper: rgba(18, 24, 42, 0.12);
+  --rule-tech:  rgba(45, 169, 225, 0.35);
+
+  /* Type scale (fluid) */
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --step--2: clamp(0.72rem, 0.70rem + 0.10vw, 0.78rem);
+  --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.90rem);
+  --step-0:  clamp(0.95rem, 0.91rem + 0.18vw, 1.05rem);
+  --step-1:  clamp(1.10rem, 1.03rem + 0.32vw, 1.30rem);
+  --step-2:  clamp(1.35rem, 1.18rem + 0.80vw, 1.75rem);
+  --step-3:  clamp(1.75rem, 1.45rem + 1.40vw, 2.45rem);
+  --step-4:  clamp(2.20rem, 1.65rem + 2.50vw, 3.40rem);
+  --step-5:  clamp(2.80rem, 1.85rem + 4.00vw, 4.80rem);
+  --step-6:  clamp(3.60rem, 2.20rem + 6.00vw, 7.20rem);
+
+  /* Space scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+  --sp-11: 12rem;
+
+  /* Layout */
+  --container: 1440px;
+  --gutter: clamp(1.25rem, 3vw, 3rem);
+  --radius: 2px;
+  --radius-lg: 6px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 180ms;
+  --dur-2: 320ms;
+  --dur-3: 560ms;
+  --dur-4: 900ms;
+
+  /* z-index */
+  --z-nav: 60;
+  --z-menu: 80;
+  --z-lightbox: 100;
+  --z-toast: 120;
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-1: 0ms; --dur-2: 0ms; --dur-3: 0ms; --dur-4: 0ms;
+  }
+}

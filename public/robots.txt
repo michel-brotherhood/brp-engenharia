@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bpfengenharia.eng.br/sitemap.xml
