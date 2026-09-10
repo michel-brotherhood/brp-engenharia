@@ -28,8 +28,13 @@ function injectImage(svg, imageData, extraClass) {
   img.dataset.atmos = 'true';
   img.src = imageData.src;
   img.alt = imageData.alt || '';
-  img.loading = 'lazy';
   img.decoding = 'async';
+  if (imageData.eager) {
+    img.loading = 'eager';
+    img.setAttribute('fetchpriority', 'high');
+  } else {
+    img.loading = 'lazy';
+  }
   if (imageData.width) img.width = imageData.width;
   if (imageData.height) img.height = imageData.height;
   img.addEventListener('error', () => img.remove(), { once: true });

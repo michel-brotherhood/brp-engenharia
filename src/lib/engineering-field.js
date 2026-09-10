@@ -337,11 +337,10 @@ export function paintProjectFrame(svg, variant = 'infra') {
   stage.appendChild(el('circle', { cx: 360, cy: 240, r: 5, fill: P.accent }));
   stage.appendChild(el('circle', { cx: 360, cy: 240, r: 14, fill: 'none', stroke: P.accent, opacity: 0.4 }));
 
-  // Coords labels
+  // Discrete corner marker only (foto real ocupa a área — labels editoriais mínimos)
   const txt = el('g', { fill: 'rgba(255,255,255,0.35)', 'font-family': 'JetBrains Mono, ui-monospace, monospace', 'font-size': 14, 'letter-spacing': 2 });
-  txt.appendChild(el('text', { x: 20, y: 30, 'dominant-baseline': 'hanging' })).textContent = 'BPF / VISUAL STUDY';
+  txt.appendChild(el('text', { x: 20, y: 30, 'dominant-baseline': 'hanging' })).textContent = 'BPF';
   txt.appendChild(el('text', { x: w - 20, y: 30, 'text-anchor': 'end', 'dominant-baseline': 'hanging' })).textContent = variant.toUpperCase();
-  txt.appendChild(el('text', { x: 20, y: h - 20 })).textContent = 'ILLUSTRATIVE SYSTEM';
   stage.appendChild(txt);
 
   svg.appendChild(stage);

@@ -1,52 +1,56 @@
 /**
- * Imagens ilustrativas — Unsplash CDN.
+ * Imagens curadas da BPF — pacote entregue pelo usuário em `public/img/`.
  *
- * IMPORTANTE: são fotografias de banco de imagens (licença Unsplash — uso
- * comercial livre, sem atribuição obrigatória). Servem como camada de
- * atmosfera visual até a BPF entregar fotografias reais das próprias obras.
- * Ficam propositalmente com opacidade baixa e mix-blend-mode luminosity
- * para que a foto vire textura navy monocromática, com o sistema técnico
- * SVG por cima — a intenção é enfatizar a linguagem de engenharia,
- * NÃO passar as fotos como registros reais da BPF.
+ * O README na raiz (upload do usuário no commit 9c31ede) documenta a
+ * intenção de cada asset e o tratamento visual esperado. Este módulo
+ * apenas mapeia esses arquivos para os slots do site que o
+ * `injectImage()` em src/main.js pluga no DOM.
  *
- * As URLs apontam direto para images.unsplash.com com resize e
- * `auto=format` (Unsplash serve WebP/AVIF automaticamente). O host
- * está liberado na CSP (`img-src https:`).
- *
- * Se qualquer URL falhar, o handler onerror remove a <img> e o SVG
- * procedural (paint no engineering-field.js) permanece visível — o site
- * não quebra.
- *
- * Para migrar para fotos reais: substituir cada URL pelo path local
- * `/photos/<obra>.webp` que a BPF fornecer.
+ * As fotos já vêm com paleta baked in (navy + azul elétrico + acentos
+ * verde-limão nas instalações internas). Por isso os overlays CSS ficam
+ * leves — só o suficiente para garantir contraste do texto sobreposto.
+ * Ver src/styles/components.css → bloco `.has-image`.
  */
 
-const U = (id, w) => `https://images.unsplash.com/photo-${id}?w=${w}&auto=format&fit=crop&q=80`;
+const IMG = '/img';
 
-// Photo IDs escolhidos por permanência na Unsplash Editorial (baixo risco de 404).
-// Estilo: arquitetura noturna, canteiros, estruturas industriais, energia solar.
 export const heroImage = {
-  src: U('1486718448742-163732cd1544', 1600),
-  width: 1600,
-  height: 2000,
-  alt: 'Estudo visual — arquitetura vertical em tom noturno',
+  src: `${IMG}/bpf-hero-vertical-architecture.webp`,
+  width: 1664,
+  height: 2080,
+  alt: 'Edifício contemporâneo com instalações aparentes iluminado ao anoitecer',
+  eager: true, // preload/high priority — first-fold LCP
 };
 
 export const ambientImage = {
-  src: U('1518005020951-eccb494ad742', 2400),
-  width: 2400,
-  height: 1000,
-  alt: 'Estudo visual — canteiro em atividade',
+  src: `${IMG}/bpf-portfolio-works-editorial.webp`,
+  width: 2560,
+  height: 1440,
+  alt: '',
 };
 
+// Mapeamento variant → foto, alinhado ao README do usuário.
+// Variants sem foto própria reutilizam o portfolio (recomendado).
 export const projectImages = {
-  infra:       { src: U('1581094794329-c8112a89af12', 1920), alt: 'Estudo visual — infraestrutura industrial' },
-  commercial:  { src: U('1497366216548-37526070297c', 1920), alt: 'Estudo visual — fachada comercial' },
-  residential: { src: U('1503174971373-b1f69850bded', 1920), alt: 'Estudo visual — residencial em construção' },
-  coastal:     { src: U('1519821172144-4f87d6c11e17', 1920), alt: 'Estudo visual — empreendimento costeiro' },
-  solar:       { src: U('1509391366360-2e959784a276', 1920), alt: 'Estudo visual — painéis fotovoltaicos' },
-  industrial:  { src: U('1587293852726-70cdb56c2866', 1920), alt: 'Estudo visual — estrutura industrial' },
-  hospital:    { src: U('1519494026892-80bbd2d6fd0d', 1920), alt: 'Estudo visual — edifício institucional' },
+  residential: {
+    src: `${IMG}/bpf-installations-technical-study.webp`,
+    width: 2304, height: 1536,
+    alt: 'Estudo técnico — instalações elétricas e infraestrutura',
+  },
+  commercial: {
+    src: `${IMG}/bpf-energy-efficiency-technical-study.webp`,
+    width: 2304, height: 1536,
+    alt: 'Estudo técnico — eficiência energética e sistemas HVAC',
+  },
+  solar: {
+    src: `${IMG}/bpf-photovoltaic-energy-study.webp`,
+    width: 2304, height: 1536,
+    alt: 'Estudo técnico — energia fotovoltaica',
+  },
+  infra:      { src: `${IMG}/bpf-portfolio-works-editorial.webp`, width: 2560, height: 1440, alt: '' },
+  coastal:    { src: `${IMG}/bpf-portfolio-works-editorial.webp`, width: 2560, height: 1440, alt: '' },
+  industrial: { src: `${IMG}/bpf-portfolio-works-editorial.webp`, width: 2560, height: 1440, alt: '' },
+  hospital:   { src: `${IMG}/bpf-portfolio-works-editorial.webp`, width: 2560, height: 1440, alt: '' },
 };
 
 export function imageForVariant(variant) {
