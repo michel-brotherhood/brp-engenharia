@@ -14,13 +14,64 @@ import {
   initForm,
   initYear,
 } from './lib/interactions.js';
+import { heroImage, ambientImage, imageForVariant } from './data/images.js';
+
+/**
+ * Insere <img> como camada de atmosfera atrás do SVG técnico.
+ * Se a imagem falhar ao carregar (rede, 404), remove-se sozinha e o
+ * SVG procedural fica visível como fallback — o site não quebra.
+ */
+function injectImage(svg, imageData, extraClass) {
+  const parent = svg.parentElement;
+  if (!parent || parent.querySelector('img[data-atmos]')) return;
+  const img = document.createElement('img');
+  img.dataset.atmos = 'true';
+  img.src = imageData.src;
+  img.alt = imageData.alt || '';
+  img.loading = 'lazy';
+  img.decoding = 'async';
+  if (imageData.width) img.width = imageData.width;
+  if (imageData.height) img.height = imageData.height;
+  img.addEventListener('error', () => img.remove(), { once: true });
+  parent.classList.add('has-image');
+  if (extraClass) parent.classList.add(extraClass);
+  parent.insertBefore(img, svg);
+}
 
 const painters = {
   'hero-field': (svg) => paintHeroField(svg),
-  'hero-frame': (svg) => paintHeroFrame(svg),
-  'ambient': (svg) => paintAmbientField(svg),
-  'project': (svg) => paintProjectFrame(svg, svg.dataset.variant || 'infra'),
-  'sector': (svg) => paintSectorPreview(svg, svg.dataset.sector || ''),
+  'hero-frame': (svg) => {
+    injectImage(svg, heroImage);
+    paintHeroFrame(svg);
+  },
+  'ambient': (svg) => {
+    injectImage(svg, ambientImage);
+    paintAmbientField(svg);
+  },
+  'project': (svg) => {
+    const variant = svg.dataset.variant || 'infra';
+    injectImage(svg, imageForVariant(variant));
+    paintProjectFrame(svg, variant);
+  },
+  'sector': (svg) => {
+    // Reuse the project image mapping for the sector preview atmosphere.
+    const slug = svg.dataset.sector || '';
+    const map = {
+      'torres-comerciais-e-residenciais': 'commercial',
+      'fotovoltaicas': 'solar',
+      'obras-industriais-de-infraestrutura-e-galpoes': 'industrial',
+      'hoteis': 'commercial',
+      'hospitais-e-clinicas': 'hospital',
+      'escolas': 'residential',
+      'shoppings-e-lojas': 'commercial',
+      'residencias-alto-padrao': 'residential',
+      'concessionarias': 'commercial',
+      'restauracoes': 'residential',
+      'restaurantes': 'commercial',
+    };
+    injectImage(svg, imageForVariant(map[slug] || 'commercial'));
+    paintSectorPreview(svg, slug);
+  },
 };
 
 function paint(svg) {

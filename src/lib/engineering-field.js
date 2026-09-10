@@ -13,7 +13,8 @@ const NAVY = '#0F1A31';
 const RULE = 'rgba(231, 235, 243, 0.10)';
 const RULE_STRONG = 'rgba(231, 235, 243, 0.22)';
 const TECH = '#2DA9E1';
-const SIGNAL = '#E85A1F';
+const HIGHLIGHT = '#6BC5EB';
+const SIGNAL = HIGHLIGHT; // alias legado — antes era laranja, agora highlight tech blue
 
 function el(name, attrs = {}) {
   const node = document.createElementNS(NS, name);
@@ -231,7 +232,7 @@ export function paintHeroFrame(svg) {
     nodes.appendChild(el('circle', { cx: x, cy: y, r: 4, fill: '#0A1020', stroke: '#2DA9E1', 'stroke-width': 1.2 }));
     nodes.appendChild(el('circle', { cx: x, cy: y, r: 12, fill: 'none', stroke: '#2DA9E1', 'stroke-width': 0.6, opacity: 0.5 }));
   }
-  nodes.appendChild(el('circle', { cx: 480, cy: 400, r: 7, fill: '#E85A1F' }));
+  nodes.appendChild(el('circle', { cx: 480, cy: 400, r: 7, fill: HIGHLIGHT }));
   svg.appendChild(nodes);
 
   // Solar panel abstract on top of right building
@@ -266,13 +267,13 @@ export function paintProjectFrame(svg, variant = 'infra') {
   svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
 
   const palettes = {
-    infra: { bg1: '#0A1020', bg2: '#182A50', line: '#2DA9E1', accent: '#E85A1F' },
-    commercial: { bg1: '#0F1A31', bg2: '#24344F', line: '#6BC5EB', accent: '#E85A1F' },
-    residential: { bg1: '#12182A', bg2: '#26303F', line: '#2DA9E1', accent: '#F27538' },
-    coastal: { bg1: '#0A1020', bg2: '#0F1A31', line: '#6BC5EB', accent: '#E85A1F' },
-    industrial: { bg1: '#060911', bg2: '#172642', line: '#2DA9E1', accent: '#E85A1F' },
-    hospital: { bg1: '#0F1A31', bg2: '#24344F', line: '#6BC5EB', accent: '#E85A1F' },
-    solar: { bg1: '#0A1020', bg2: '#182A50', line: '#2DA9E1', accent: '#F27538' },
+    infra: { bg1: '#0A1020', bg2: '#182A50', line: '#2DA9E1', accent: HIGHLIGHT },
+    commercial: { bg1: '#0F1A31', bg2: '#24344F', line: '#6BC5EB', accent: HIGHLIGHT },
+    residential: { bg1: '#12182A', bg2: '#26303F', line: '#2DA9E1', accent: HIGHLIGHT },
+    coastal: { bg1: '#0A1020', bg2: '#0F1A31', line: '#6BC5EB', accent: HIGHLIGHT },
+    industrial: { bg1: '#060911', bg2: '#172642', line: '#2DA9E1', accent: HIGHLIGHT },
+    hospital: { bg1: '#0F1A31', bg2: '#24344F', line: '#6BC5EB', accent: HIGHLIGHT },
+    solar: { bg1: '#0A1020', bg2: '#182A50', line: '#2DA9E1', accent: HIGHLIGHT },
   };
   const P = palettes[variant] || palettes.infra;
 

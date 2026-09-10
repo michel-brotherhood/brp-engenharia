@@ -137,9 +137,11 @@ p { text-wrap: pretty; max-width: 68ch; }
   position: relative;
   padding-block: clamp(4.5rem, 8vw, 9rem);
 }
-.section.paper {
+.section.paper,
+.paper {
   background: var(--bg-paper);
   color: var(--fg-on-paper);
+  --accent: var(--accent-on-paper);
 }
 .section.deep {
   background: var(--bg-deep);
