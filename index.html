@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>BPF Engenharia — Engenharia de instalações e eficiência energética</title>
+    <meta name="description" content="Instalações, eficiência energética e execução técnica para empreendimentos residenciais, comerciais, industriais e institucionais. Mais de 400 obras entregues desde os anos 1990." />
+    <meta name="theme-color" content="#0A1020" />
+    <link rel="canonical" href="https://bpfengenharia.eng.br/" />
+    <link rel="icon" href="/brand/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/brand/bpf-icon-navy.svg" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BPF Engenharia — Engenharia de instalações e eficiência energética" />
+    <meta property="og:description" content="Instalações que sustentam cada detalhe. Mais de 400 obras entregues desde os anos 1990." />
+    <meta property="og:image" content="/brand/bpf-preview.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BPF Engenharia",
+      "url": "https://bpfengenharia.eng.br/",
+      "logo": "/brand/bpf-logo-horizontal.svg",
+      "description": "Engenharia de instalações e eficiência energética.",
+      "email": "contato@bpfengenharia.eng.br",
+      "telephone": "+55-21-2210-5298"
+    }
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Ir para o conteúdo</a>
+
+    <!-- NAV -->
+    <header class="nav" data-nav>
+      <div class="container nav__inner">
+        <a class="nav__brand" href="/" aria-label="BPF Engenharia — início">
+          <img src="/brand/bpf-logo-horizontal-white.svg" alt="BPF Engenharia" width="180" height="40" />
+          <span class="brand-txt">Engenharia de instalações</span>
+        </a>
+        <nav class="nav__links" aria-label="Navegação principal">
+          <a href="/sobre.html">Sobre</a>
+          <a href="/solucoes.html">Soluções</a>
+          <a href="/obras.html">Obras</a>
+          <a href="/obras-em-andamento.html">Andamento</a>
+          <a href="/clientes.html">Clientes</a>
+          <a href="/contato.html">Contato</a>
+        </nav>
+        <a class="nav__cta" href="/contato.html">Falar sobre um projeto</a>
+        <button class="nav__burger" type="button" data-burger aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+      <div class="mobile-menu__top">
+        <img src="/brand/bpf-logo-horizontal-white.svg" alt="BPF Engenharia" height="32" />
+        <button type="button" data-menu-close class="pill" aria-label="Fechar menu">Fechar ✕</button>
+      </div>
+      <nav class="mobile-menu__list" aria-label="Navegação">
+        <a href="/sobre.html">Sobre <span class="num">01</span></a>
+        <a href="/solucoes.html">Soluções <span class="num">02</span></a>
+        <a href="/obras.html">Obras <span class="num">03</span></a>
+        <a href="/obras-em-andamento.html">Andamento <span class="num">04</span></a>
+        <a href="/clientes.html">Clientes <span class="num">05</span></a>
+        <a href="/contato.html">Contato <span class="num">06</span></a>
+      </nav>
+    </div>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__field" aria-hidden="true">
+          <svg data-paint="hero-field" role="presentation"></svg>
+        </div>
+        <div class="container hero__inner">
+          <div class="hero__copy reveal">
+            <div class="hero__label">
+              <span class="code">FIELD-00 / HERO</span>
+              <span class="rule"></span>
+              <span class="kind">Engenharia de instalações + eficiência energética</span>
+            </div>
+            <h1 id="hero-title" class="hero__title">
+              A engenharia<br />que <span class="accent">sustenta</span><br />cada detalhe.
+            </h1>
+            <p class="hero__lead">
+              Instalações, eficiência energética e execução técnica para empreendimentos que precisam funcionar por inteiro.
+            </p>
+            <div class="hero__ctas">
+              <a class="btn primary" href="/contato.html">
+                Falar sobre um projeto <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="btn ghost" href="/obras.html">
+                Explorar obras <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="hero__data">
+              <div class="data-strip">
+                <div class="data-strip__item">
+                  <span class="data-strip__value"><em>+400</em></span>
+                  <span class="data-strip__label">Obras entregues*</span>
+                </div>
+                <div class="data-strip__item">
+                  <span class="data-strip__value">1990</span>
+                  <span class="data-strip__label">Desde os anos 90</span>
+                </div>
+                <div class="data-strip__item">
+                  <span class="data-strip__value">03</span>
+                  <span class="data-strip__label">Frentes de atuação</span>
+                </div>
+                <div class="data-strip__item">
+                  <span class="data-strip__value">11</span>
+                  <span class="data-strip__label">Segmentos no portfólio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__media reveal">
+            <div class="hero__media-frame">
+              <svg data-paint="hero-frame" role="img" aria-labelledby="hero-media-title"></svg>
+              <span id="hero-media-title" class="visually-hidden">Estudo visual: volume arquitetônico abstrato com camadas de instalações e distribuição de energia.</span>
+              <div class="hero__coords" aria-hidden="true">
+                <span>SYS <em>/ 01</em></span>
+                <span>REV 2026.09</span>
+              </div>
+              <div class="hero__tags" aria-hidden="true">
+                <span>ILLUSTRATIVE SYSTEM</span>
+                <span>BPF — VISUAL STUDY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <span>Explorar</span>
+          <span class="line"></span>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 01 — SOBRE -->
+      <section class="section paper" aria-labelledby="cap1-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 01 — SOBRE</span>
+            <h2 id="cap1-title" class="chapter-title__title">Qualidade, eficiência e atendimento.</h2>
+          </div>
+          <div class="editorial">
+            <div class="reveal">
+              <p class="lead" style="margin-bottom: 1.5rem;">
+                Fundada nos anos 1990, a BPF Engenharia começou atendendo ao setor industrial, em instalações de galpões e subestações. Com o reconhecimento do mercado pela eficiência, flexibilidade, qualidade de atendimento e busca de novas soluções, a empresa expandiu sua atuação para diferentes segmentos da construção civil e industrial.
+              </p>
+              <p style="margin-bottom: 1.5rem;">
+                Hoje, a BPF atende obras residenciais e comerciais, hospitais, clínicas, escolas, shoppings, laboratórios, hotéis, concessionárias, galpões industriais, lojas, restaurantes, restauração do patrimônio histórico e residências de alto padrão.
+              </p>
+              <p style="margin-bottom: 2rem;">
+                Com a busca por novas tecnologias, passou também a atuar em energia fotovoltaica, gestão de energia e eficiência energética.
+              </p>
+              <a class="btn-inline" href="/sobre.html">Conhecer a BPF <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="editorial__media reveal">
+              <svg data-paint="project" data-variant="commercial" role="img" aria-label="Estudo visual editorial da BPF Engenharia"></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 02 — COMO A BPF ATUA -->
+      <section class="section dark" aria-labelledby="cap2-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 02 — COMO ATUAMOS</span>
+            <h2 id="cap2-title" class="chapter-title__title">Da leitura do empreendimento até a entrega da instalação.</h2>
+          </div>
+          <div class="approach reveal">
+            <div class="approach__step">
+              <h3 class="approach__title">Entender o empreendimento</h3>
+              <p class="approach__desc">Contexto, necessidades e complexidade técnica. A conversa começa pelo projeto, não por uma solução genérica.</p>
+            </div>
+            <div class="approach__step">
+              <h3 class="approach__title">Definir a solução</h3>
+              <p class="approach__desc">Instalações, energia e escopo compatíveis com a obra — respeitando prazo, uso e coordenação técnica.</p>
+            </div>
+            <div class="approach__step">
+              <h3 class="approach__title">Executar com precisão</h3>
+              <p class="approach__desc">Coordenação com projetistas e construtoras, atenção aos detalhes e qualidade de atendimento em obra.</p>
+            </div>
+            <div class="approach__step">
+              <h3 class="approach__title">Entregar valor</h3>
+              <p class="approach__desc">Uma instalação que agrega valor ao empreendimento, aos clientes e aos parceiros envolvidos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 03 — SOLUÇÕES -->
+      <section class="section paper" aria-labelledby="cap3-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 03 — SOLUÇÕES</span>
+            <h2 id="cap3-title" class="chapter-title__title">Instalações que acompanham a complexidade da obra.</h2>
+          </div>
+
+          <div class="solution-row reveal">
+            <div class="solution-row__num">01</div>
+            <div>
+              <h3 class="solution-row__title">Engenharia de instalações</h3>
+              <p class="solution-row__desc">
+                Engenharia de instalações para empreendimentos residenciais, comerciais, industriais e institucionais, com foco em qualidade, atendimento e coordenação técnica.
+              </p>
+              <div style="margin-top:1.5rem;">
+                <a class="btn-inline" href="/solucoes.html#instalacoes">Conhecer solução <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div class="solution-row__media">
+              <svg data-paint="project" data-variant="residential" role="img" aria-label="Estudo visual de instalações"></svg>
+            </div>
+          </div>
+
+          <div class="solution-row reverse reveal">
+            <div class="solution-row__num">02</div>
+            <div>
+              <h3 class="solution-row__title">Eficiência energética e gestão de energia</h3>
+              <p class="solution-row__desc">
+                Gestão e eficiência energética como parte de uma atuação orientada por novas tecnologias e melhoria contínua, sem promessas de percentual de economia sem dado validado.
+              </p>
+              <div style="margin-top:1.5rem;">
+                <a class="btn-inline" href="/solucoes.html#eficiencia">Conhecer solução <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div class="solution-row__media">
+              <svg data-paint="project" data-variant="commercial" role="img" aria-label="Estudo visual de eficiência energética"></svg>
+            </div>
+          </div>
+
+          <div class="solution-row reveal">
+            <div class="solution-row__num">03</div>
+            <div>
+              <h3 class="solution-row__title">Energia fotovoltaica</h3>
+              <p class="solution-row__desc">
+                Instalações fotovoltaicas aplicadas a diferentes contextos de obra, conforme o portfólio da BPF.
+              </p>
+              <div style="margin-top:1.5rem;">
+                <a class="btn-inline" href="/solucoes.html#fotovoltaica">Conhecer solução <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+            <div class="solution-row__media">
+              <svg data-paint="project" data-variant="solar" role="img" aria-label="Estudo visual de energia fotovoltaica"></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 04 — SEGMENTOS -->
+      <section class="section paper" aria-labelledby="cap4-title" style="border-top:1px solid var(--rule-paper);">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 04 — SEGMENTOS</span>
+            <h2 id="cap4-title" class="chapter-title__title">Onde a engenharia ganha escala.</h2>
+          </div>
+          <div style="display:grid; grid-template-columns: 1fr; gap: 3rem; align-items: start;" class="reveal" data-sectors>
+            <div>
+              <div class="sectors">
+                <a class="sector" href="/obras.html?setor=torres-comerciais-e-residenciais" data-sector="torres-comerciais-e-residenciais">
+                  <span class="sector__num">01</span>
+                  <span class="sector__name">Torres residenciais e comerciais</span>
+                  <span class="sector__meta">Verticais</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=fotovoltaicas" data-sector="fotovoltaicas">
+                  <span class="sector__num">02</span>
+                  <span class="sector__name">Instalações fotovoltaicas</span>
+                  <span class="sector__meta">Energia</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes" data-sector="obras-industriais-de-infraestrutura-e-galpoes">
+                  <span class="sector__num">03</span>
+                  <span class="sector__name">Obras industriais, infraestrutura e galpões</span>
+                  <span class="sector__meta">Indústria</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=hoteis" data-sector="hoteis">
+                  <span class="sector__num">04</span>
+                  <span class="sector__name">Hotéis</span>
+                  <span class="sector__meta">Hospitalidade</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=hospitais-e-clinicas" data-sector="hospitais-e-clinicas">
+                  <span class="sector__num">05</span>
+                  <span class="sector__name">Hospitais e clínicas</span>
+                  <span class="sector__meta">Saúde</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=escolas" data-sector="escolas">
+                  <span class="sector__num">06</span>
+                  <span class="sector__name">Escolas</span>
+                  <span class="sector__meta">Educação</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=shoppings-e-lojas" data-sector="shoppings-e-lojas">
+                  <span class="sector__num">07</span>
+                  <span class="sector__name">Shoppings e lojas</span>
+                  <span class="sector__meta">Varejo</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=residencias-alto-padrao" data-sector="residencias-alto-padrao">
+                  <span class="sector__num">08</span>
+                  <span class="sector__name">Residências de alto padrão</span>
+                  <span class="sector__meta">Residencial</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=concessionarias" data-sector="concessionarias">
+                  <span class="sector__num">09</span>
+                  <span class="sector__name">Concessionárias</span>
+                  <span class="sector__meta">Automotivo</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=restauracoes" data-sector="restauracoes">
+                  <span class="sector__num">10</span>
+                  <span class="sector__name">Restaurações</span>
+                  <span class="sector__meta">Patrimônio</span>
+                </a>
+                <a class="sector" href="/obras.html?setor=restaurantes" data-sector="restaurantes">
+                  <span class="sector__num">11</span>
+                  <span class="sector__name">Restaurantes</span>
+                  <span class="sector__meta">Gastronomia</span>
+                </a>
+              </div>
+            </div>
+            <div class="sectors-preview" style="position:sticky; top:16vh;">
+              <div class="sectors-preview__frame" data-sector-frame="torres-comerciais-e-residenciais"><svg data-paint="sector" data-sector="torres-comerciais-e-residenciais"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="fotovoltaicas"><svg data-paint="sector" data-sector="fotovoltaicas"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="obras-industriais-de-infraestrutura-e-galpoes"><svg data-paint="sector" data-sector="obras-industriais-de-infraestrutura-e-galpoes"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="hoteis"><svg data-paint="sector" data-sector="hoteis"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="hospitais-e-clinicas"><svg data-paint="sector" data-sector="hospitais-e-clinicas"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="escolas"><svg data-paint="sector" data-sector="escolas"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="shoppings-e-lojas"><svg data-paint="sector" data-sector="shoppings-e-lojas"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="residencias-alto-padrao"><svg data-paint="sector" data-sector="residencias-alto-padrao"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="concessionarias"><svg data-paint="sector" data-sector="concessionarias"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="restauracoes"><svg data-paint="sector" data-sector="restauracoes"></svg></div>
+              <div class="sectors-preview__frame" data-sector-frame="restaurantes"><svg data-paint="sector" data-sector="restaurantes"></svg></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 05 — DIFERENCIAL -->
+      <section class="section dark" aria-labelledby="cap5-title" style="border-top:1px solid var(--rule-dark);">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 05 — DIFERENCIAL</span>
+            <h2 id="cap5-title" class="chapter-title__title">Referência em instalações. Qualidade, eficiência e atendimento.</h2>
+          </div>
+          <div class="editorial">
+            <div class="reveal">
+              <p class="lead" style="margin-bottom:1.5rem;">
+                O diferencial da BPF não está em executar um serviço isolado. Está em agregar valor ao empreendimento, aos clientes e aos parceiros — por meio de conhecimento técnico, atendimento próximo e busca constante por novas soluções.
+              </p>
+              <p style="margin-bottom:2rem; color: var(--fg-on-dark-mute);">
+                Respeito, ética e melhoria contínua orientam cada obra desde os anos 1990.
+              </p>
+
+              <div class="values" style="border-color: var(--rule-dark);">
+                <div class="values__item" style="border-color: var(--rule-dark);">
+                  <div class="values__num">01</div>
+                  <h3 class="values__title">Respeito</h3>
+                  <p>Aos clientes, colaboradores, parceiros e ao meio ambiente.</p>
+                </div>
+                <div class="values__item" style="border-color: var(--rule-dark);">
+                  <div class="values__num">02</div>
+                  <h3 class="values__title">Ética</h3>
+                  <p>Em cada atitude, decisão e relação de trabalho.</p>
+                </div>
+                <div class="values__item" style="border-color: var(--rule-dark); border-right:0;">
+                  <div class="values__num">03</div>
+                  <h3 class="values__title">Melhoria contínua</h3>
+                  <p>Foco constante em processos, estudo e desenvolvimento de tecnologia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="editorial__media reveal">
+              <svg data-paint="project" data-variant="infra" role="img" aria-label="Sistema técnico da BPF"></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRÊS MENSAGENS -->
+      <section class="section deep" aria-labelledby="msgs-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">MENSAGENS-CHAVE</span>
+            <h2 id="msgs-title" class="chapter-title__title">Três ideias que atravessam cada obra.</h2>
+          </div>
+          <div class="messages">
+            <article class="message reveal">
+              <div class="message__num">01</div>
+              <h3 class="message__title">Experiência que atravessa a obra.</h3>
+              <p class="message__desc">A história da BPF começou no setor industrial, em instalações de galpões e subestações — e se expandiu para diferentes segmentos da construção civil.</p>
+            </article>
+            <article class="message reveal">
+              <div class="message__num">02</div>
+              <h3 class="message__title">Tecnologia aplicada ao que importa.</h3>
+              <p class="message__desc">Novas tecnologias aparecem como ferramentas para gerar soluções e eficiência — nunca como espetáculo. É a engenharia que decide o que precisa ser resolvido.</p>
+            </article>
+            <article class="message reveal">
+              <div class="message__num">03</div>
+              <h3 class="message__title">Parceria que agrega valor.</h3>
+              <p class="message__desc">A missão da BPF é explícita: agregar valor a todos os empreendimentos dos seus clientes e parceiros, com transparência.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARA QUEM PRECISA ENTREGAR UMA OBRA -->
+      <section class="section dark" aria-labelledby="audienceA-title" style="border-top:1px solid var(--rule-dark);">
+        <div class="container">
+          <div class="editorial">
+            <div class="reveal">
+              <span class="eyebrow">Para construtoras, incorporadoras e engenharia</span>
+              <h2 id="audienceA-title" class="h-section" style="margin: 1rem 0 1.5rem;">Mais clareza para uma obra que precisa funcionar.</h2>
+              <p class="lead" style="margin-bottom:2rem;">
+                Cada empreendimento possui uma combinação própria de contexto, prazo, uso e complexidade. A conversa comercial deve começar entendendo o projeto — não empurrando uma solução genérica.
+              </p>
+              <a class="btn primary" href="/contato.html">
+                Falar sobre um projeto <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div class="editorial__media reveal">
+              <svg data-paint="project" data-variant="commercial" role="img" aria-label="Estudo visual"></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARA QUEM VALORIZA CADA DETALHE -->
+      <section class="section paper" aria-labelledby="audienceB-title">
+        <div class="container">
+          <div class="editorial">
+            <div class="editorial__media reveal">
+              <svg data-paint="project" data-variant="residential" role="img" aria-label="Estudo visual"></svg>
+            </div>
+            <div class="reveal">
+              <span class="eyebrow" style="color: var(--c-navy-500);">Para quem valoriza cada detalhe</span>
+              <h2 id="audienceB-title" class="h-section" style="margin: 1rem 0 1.5rem;">Quando a instalação funciona, a experiência do espaço muda.</h2>
+              <p class="lead" style="margin-bottom:2rem;">
+                Hospitais, clínicas, hotéis, escolas, lojas, restaurantes, condomínios e residências de alto padrão precisam de atenção aos detalhes, atendimento próximo e respeito ao contexto da obra.
+              </p>
+              <a class="btn ghost" href="/obras.html">
+                Ver obras entregues <span class="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 06 — OBRAS SELECIONADAS -->
+      <section class="section deep" aria-labelledby="cap6-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 06 — OBRAS SELECIONADAS</span>
+            <h2 id="cap6-title" class="chapter-title__title">O trabalho fala por meio das obras.</h2>
+          </div>
+
+          <div class="projects reveal">
+            <article class="project p-tall">
+              <div class="project__media">
+                <svg data-paint="project" data-variant="coastal" role="img" aria-label="Residencial Portogalo"></svg>
+              </div>
+              <div class="project__body">
+                <span class="project__sector">Residencial / Hotelaria</span>
+                <h3 class="project__title">Residencial Portogalo</h3>
+                <span class="project__meta">Angra dos Reis · Laer</span>
+              </div>
+            </article>
+
+            <article class="project p-wide">
+              <div class="project__media">
+                <svg data-paint="project" data-variant="infra" role="img" aria-label="E.T.E. São Pedro da Aldeia"></svg>
+              </div>
+              <div class="project__body">
+                <span class="project__sector">Infraestrutura</span>
+                <h3 class="project__title">E.T.E. São Pedro da Aldeia</h3>
+                <span class="project__meta">Carioca Engenharia · Prolagos</span>
+              </div>
+            </article>
+
+            <article class="project p-med">
+              <div class="project__media">
+                <svg data-paint="project" data-variant="commercial" role="img" aria-label="SIG H. Stern"></svg>
+              </div>
+              <div class="project__body">
+                <span class="project__sector">Comercial de alto padrão</span>
+                <h3 class="project__title">SIG H. Stern</h3>
+                <span class="project__meta">[CONFIRMAR LOCALIZAÇÃO]</span>
+              </div>
+            </article>
+
+            <article class="project p-med">
+              <div class="project__media">
+                <svg data-paint="project" data-variant="residential" role="img" aria-label="Novatech HSI — Leblon"></svg>
+              </div>
+              <div class="project__body">
+                <span class="project__sector">Residencial de alto padrão</span>
+                <h3 class="project__title">Novatech HSI — Leblon</h3>
+                <span class="project__meta">Rio de Janeiro · Novatech</span>
+              </div>
+            </article>
+          </div>
+
+          <div style="margin-top: 3rem;" class="reveal">
+            <a class="btn ghost" href="/obras.html">Ver todas as obras <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 07 — OBRAS EM ANDAMENTO -->
+      <section class="section dark" aria-labelledby="cap7-title" style="border-top:1px solid var(--rule-dark);">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 07 — ANDAMENTO</span>
+            <h2 id="cap7-title" class="chapter-title__title">Acompanhe a obra em movimento.</h2>
+          </div>
+          <p class="lead reveal" style="margin-bottom: 2.5rem;">
+            Os percentuais representam a última atualização publicada e podem mudar conforme o andamento de cada obra. Quando não há revisão recente confiável, o percentual não é exibido — a obra aparece apenas com o status "acompanhamento".
+          </p>
+
+          <div class="ongoing reveal">
+            <article class="ongoing__card">
+              <div class="ongoing__header">
+                <h3 class="ongoing__title">Residência AC</h3>
+                <span class="ongoing__partner">Baggio</span>
+              </div>
+              <span class="ongoing__status">Acompanhamento</span>
+            </article>
+            <article class="ongoing__card">
+              <div class="ongoing__header">
+                <h3 class="ongoing__title">Residência DRC</h3>
+                <span class="ongoing__partner">Laer</span>
+              </div>
+              <span class="ongoing__status">Acompanhamento</span>
+            </article>
+            <article class="ongoing__card">
+              <div class="ongoing__header">
+                <h3 class="ongoing__title">Residência EM</h3>
+                <span class="ongoing__partner">Stewart</span>
+              </div>
+              <span class="ongoing__status">Acompanhamento</span>
+            </article>
+            <article class="ongoing__card">
+              <div class="ongoing__header">
+                <h3 class="ongoing__title">Residência RMP</h3>
+                <span class="ongoing__partner">CMN Construtora</span>
+              </div>
+              <span class="ongoing__status">Acompanhamento</span>
+            </article>
+            <article class="ongoing__card">
+              <div class="ongoing__header">
+                <h3 class="ongoing__title">Residencial OS Angra</h3>
+                <span class="ongoing__partner">Laer</span>
+              </div>
+              <span class="ongoing__status">Acompanhamento</span>
+            </article>
+            <article class="ongoing__card">
+              <div class="ongoing__header">
+                <h3 class="ongoing__title">Edicin</h3>
+                <span class="ongoing__partner">Novatec</span>
+              </div>
+              <span class="ongoing__status">Acompanhamento</span>
+            </article>
+          </div>
+
+          <div style="margin-top: 2.5rem;" class="reveal">
+            <a class="btn ghost" href="/obras-em-andamento.html">Ver todas as obras em andamento <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 08 — CLIENTES E PARCEIROS -->
+      <section class="section paper" aria-labelledby="cap8-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 08 — CLIENTES E PARCEIROS</span>
+            <h2 id="cap8-title" class="chapter-title__title">Relações construídas obra a obra.</h2>
+          </div>
+          <p class="lead reveal" style="margin-bottom: 2rem;">
+            Alguns clientes atendidos ao longo da trajetória da BPF Engenharia — informação publicada no portfólio atual.
+          </p>
+          <div class="clients reveal">
+            <div class="clients__cell">Sesc</div>
+            <div class="clients__cell">Sebrae</div>
+            <div class="clients__cell">Laer Engenharia</div>
+            <div class="clients__cell">Baggio</div>
+            <div class="clients__cell">Stewart</div>
+            <div class="clients__cell">CMN Construtora</div>
+            <div class="clients__cell">Novatec</div>
+            <div class="clients__cell">Carioca Engenharia</div>
+            <div class="clients__cell">Prolagos</div>
+            <div class="clients__cell">Be in Rio</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 09 — MISSÃO, VISÃO, VALORES -->
+      <section class="section deep" aria-labelledby="cap9-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 09 — INSTITUCIONAL</span>
+            <h2 id="cap9-title" class="chapter-title__title">Missão, visão e valores.</h2>
+          </div>
+          <div class="editorial">
+            <div class="reveal">
+              <span class="eyebrow">Missão</span>
+              <p class="lead" style="margin: 1rem 0 2.5rem; color: #fff;">
+                Atender ao mercado de engenharia de instalações e eficiência energética com alto padrão de qualidade, novas tecnologias e transparência, agregando valor a todos os empreendimentos dos nossos clientes e parceiros.
+              </p>
+              <span class="eyebrow">Visão</span>
+              <p class="lead" style="margin: 1rem 0 0; color: #fff;">
+                Ser a empresa referência em instalações e eficiência energética, pelo conhecimento técnico, atendimento, qualidade, parceria e soluções que apresenta para todas as suas obras.
+              </p>
+            </div>
+            <div class="reveal">
+              <span class="eyebrow">Valores</span>
+              <div class="stack" style="gap: 1.5rem; margin-top: 1rem;">
+                <div style="padding: 1.5rem; border: 1px solid var(--rule-dark);">
+                  <div style="font-family: var(--font-mono); color: var(--accent); font-size: var(--step--2); letter-spacing: 0.16em; margin-bottom: 0.5rem;">01 — RESPEITO</div>
+                  <p>Aos clientes, colaboradores, parceiros e ao meio ambiente.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--rule-dark);">
+                  <div style="font-family: var(--font-mono); color: var(--accent); font-size: var(--step--2); letter-spacing: 0.16em; margin-bottom: 0.5rem;">02 — ÉTICA</div>
+                  <p>Em cada atitude, decisão e relação de trabalho.</p>
+                </div>
+                <div style="padding: 1.5rem; border: 1px solid var(--rule-dark);">
+                  <div style="font-family: var(--font-mono); color: var(--accent); font-size: var(--step--2); letter-spacing: 0.16em; margin-bottom: 0.5rem;">03 — MELHORIA CONTÍNUA</div>
+                  <p>Foco constante em processos, estudo e desenvolvimento de tecnologia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 10 — HISTÓRIA -->
+      <section class="section paper" aria-labelledby="cap10-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 10 — HISTÓRIA</span>
+            <h2 id="cap10-title" class="chapter-title__title">Uma história de instalações, aprendizado e evolução.</h2>
+          </div>
+          <div class="timeline reveal">
+            <article class="timeline__item">
+              <div class="timeline__year">ANOS 1990</div>
+              <h3 class="timeline__title">Fundação e início da trajetória</h3>
+              <p>A BPF Engenharia começa atendendo ao setor industrial, com foco em instalações de galpões e subestações.</p>
+            </article>
+            <article class="timeline__item">
+              <div class="timeline__year">Consolidação</div>
+              <h3 class="timeline__title">Reconhecimento pela eficiência</h3>
+              <p>A eficiência, a flexibilidade, a qualidade de atendimento e a busca de novas soluções tornam-se marcas da empresa.</p>
+            </article>
+            <article class="timeline__item">
+              <div class="timeline__year">Expansão</div>
+              <h3 class="timeline__title">Diferentes segmentos</h3>
+              <p>A atuação se estende a diferentes segmentos da construção civil e industrial — do residencial ao institucional.</p>
+            </article>
+            <article class="timeline__item">
+              <div class="timeline__year">Novas tecnologias</div>
+              <h3 class="timeline__title">Energia fotovoltaica e eficiência energética</h3>
+              <p>A empresa passa a atuar também em energia fotovoltaica, gestão de energia e eficiência energética.</p>
+            </article>
+            <article class="timeline__item">
+              <div class="timeline__year">Trajetória atual</div>
+              <h3 class="timeline__title">Referência em instalações</h3>
+              <p>Mais de 400 obras entregues, conforme informação publicada no site atual, e uma atuação orientada por respeito, ética e melhoria contínua.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 11 — CONTATO -->
+      <section class="section paper" aria-labelledby="cap11-title" style="border-top:1px solid var(--rule-paper);">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">CAPÍTULO 11 — CONTATO</span>
+            <h2 id="cap11-title" class="chapter-title__title">O próximo projeto começa com uma conversa.</h2>
+          </div>
+          <div class="editorial">
+            <div class="reveal">
+              <p class="lead" style="margin-bottom: 2rem;">
+                Conte um pouco sobre o empreendimento, a necessidade técnica ou o momento da obra. A equipe da BPF poderá entender o contexto e orientar o próximo passo.
+              </p>
+              <div class="contact-strip">
+                <div class="contact-strip__item">
+                  <span class="label">E-mail</span>
+                  <a class="value" href="mailto:contato@bpfengenharia.eng.br">contato@bpfengenharia.eng.br</a>
+                </div>
+                <div class="contact-strip__item">
+                  <span class="label">Telefone</span>
+                  <a class="value" href="tel:+552122105298">(21) 2210-5298</a>
+                </div>
+                <div class="contact-strip__item">
+                  <span class="label">Webmail</span>
+                  <a class="value" href="https://webmail-seguro.com.br/bpfengenharia.eng.br/" target="_blank" rel="noopener">
+                    Acessar ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="reveal">
+              <form class="form" data-form novalidate>
+                <div class="form-row">
+                  <div class="field" data-field="name">
+                    <label for="f-name">Nome*</label>
+                    <input id="f-name" name="name" type="text" autocomplete="name" required />
+                  </div>
+                  <div class="field" data-field="company">
+                    <label for="f-company">Empresa</label>
+                    <input id="f-company" name="company" type="text" autocomplete="organization" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="field" data-field="email">
+                    <label for="f-email">E-mail*</label>
+                    <input id="f-email" name="email" type="email" autocomplete="email" required />
+                  </div>
+                  <div class="field" data-field="phone">
+                    <label for="f-phone">Telefone</label>
+                    <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="field" data-field="project_type">
+                    <label for="f-type">Tipo de empreendimento</label>
+                    <select id="f-type" name="project_type">
+                      <option value="">Selecionar…</option>
+                      <option>Residencial de alto padrão</option>
+                      <option>Torre residencial ou comercial</option>
+                      <option>Hospital / clínica</option>
+                      <option>Escola</option>
+                      <option>Hotel</option>
+                      <option>Shopping / loja</option>
+                      <option>Concessionária</option>
+                      <option>Restaurante</option>
+                      <option>Restauração / patrimônio</option>
+                      <option>Instalação fotovoltaica</option>
+                      <option>Obra industrial / galpão</option>
+                      <option>Outro</option>
+                    </select>
+                  </div>
+                  <div class="field" data-field="stage">
+                    <label for="f-stage">Etapa da obra</label>
+                    <select id="f-stage" name="stage">
+                      <option value="">Selecionar…</option>
+                      <option>Concepção / projeto</option>
+                      <option>Compatibilização técnica</option>
+                      <option>Início de obra</option>
+                      <option>Obra em andamento</option>
+                      <option>Retrofit / ampliação</option>
+                      <option>Ainda avaliando</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field" data-field="message">
+                  <label for="f-message">Mensagem*</label>
+                  <textarea id="f-message" name="message" required placeholder="Conte um pouco sobre o projeto, a obra ou a dúvida técnica."></textarea>
+                </div>
+                <div class="form-note">
+                  Nenhum endpoint público está configurado. Ao enviar, o site abre o cliente de e-mail com sua mensagem pronta para <strong>contato@bpfengenharia.eng.br</strong>. A BPF pode integrar um provedor (SMTP, HubSpot, RD Station) sem alterar o formulário.
+                </div>
+                <div class="form-status" data-form-status hidden></div>
+                <div>
+                  <button type="submit" class="btn primary">
+                    Enviar mensagem <span class="arrow" aria-hidden="true">→</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section deep" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="chapter-title reveal">
+            <span class="chapter-title__number">PERGUNTAS FREQUENTES</span>
+            <h2 id="faq-title" class="chapter-title__title">Perguntas que ajudam a começar.</h2>
+          </div>
+          <div class="faq reveal">
+            <div class="faq__item" data-faq-item>
+              <button class="faq__button" type="button" aria-expanded="false">
+                <span>Em quais tipos de obra a BPF atua?</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel">
+                <div class="faq__panel-inner">
+                  A BPF atua em obras residenciais e comerciais, hospitais, clínicas, escolas, shoppings, laboratórios, hotéis, concessionárias, galpões industriais, lojas, restaurantes, restauração de patrimônio histórico e residências de alto padrão. A lista reflete o portfólio publicado e evolui conforme novos projetos.
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <button class="faq__button" type="button" aria-expanded="false">
+                <span>A BPF atua com energia fotovoltaica?</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel">
+                <div class="faq__panel-inner">
+                  Sim. O portfólio atual apresenta instalações fotovoltaicas como parte da frente de energia — que também inclui gestão de energia e eficiência energética.
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <button class="faq__button" type="button" aria-expanded="false">
+                <span>A BPF atende obras residenciais e comerciais?</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel">
+                <div class="faq__panel-inner">
+                  Sim. A atuação se estende a diferentes segmentos da construção civil e industrial, incluindo obras residenciais e comerciais, com portfólio publicado em cada categoria.
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <button class="faq__button" type="button" aria-expanded="false">
+                <span>Como iniciar uma conversa sobre um projeto?</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel">
+                <div class="faq__panel-inner">
+                  Pelo formulário desta página, pelo e-mail contato@bpfengenharia.eng.br ou pelo telefone (21) 2210-5298. A equipe da BPF entende o contexto e orienta o próximo passo.
+                </div>
+              </div>
+            </div>
+            <div class="faq__item" data-faq-item>
+              <button class="faq__button" type="button" aria-expanded="false">
+                <span>Os percentuais das obras em andamento são atuais?</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel">
+                <div class="faq__panel-inner">
+                  Representam a última atualização publicada e podem mudar. Quando não há revisão recente confiável, o percentual não é exibido — a obra aparece com o status "acompanhamento".
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="cta-final" aria-labelledby="final-title">
+        <div class="cta-final__field" aria-hidden="true">
+          <svg data-paint="ambient" role="presentation"></svg>
+        </div>
+        <div class="container cta-final__inner reveal">
+          <span class="eyebrow">Encerramento</span>
+          <h2 id="final-title" class="h-display" style="color:#fff;">Uma obra que funciona começa com a engenharia certa.</h2>
+          <p class="lead" style="max-width: 46ch;">
+            Fale com a BPF Engenharia sobre o próximo projeto, reforma, retrofit ou solução de energia.
+          </p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a class="btn primary" href="/contato.html">Entrar em contato <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn ghost" href="tel:+552122105298">Ligar agora <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img src="/brand/bpf-logo-horizontal-white.svg" alt="BPF Engenharia" height="42" />
+            <p style="color: var(--fg-on-dark-mute); max-width: 42ch;">
+              Engenharia de instalações e eficiência energética para empreendimentos que precisam funcionar por inteiro.
+            </p>
+          </div>
+          <div>
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="/sobre.html">Sobre</a></li>
+              <li><a href="/solucoes.html">Soluções</a></li>
+              <li><a href="/obras.html">Obras</a></li>
+              <li><a href="/obras-em-andamento.html">Obras em andamento</a></li>
+              <li><a href="/clientes.html">Clientes</a></li>
+              <li><a href="/contato.html">Contato</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="mailto:contato@bpfengenharia.eng.br">contato@bpfengenharia.eng.br</a></li>
+              <li><a href="tel:+552122105298">(21) 2210-5298</a></li>
+              <li><a href="https://webmail-seguro.com.br/bpfengenharia.eng.br/" target="_blank" rel="noopener">Webmail seguro ↗</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Segmentos</h4>
+            <ul>
+              <li><a href="/obras.html?setor=hospitais-e-clinicas">Hospitais e clínicas</a></li>
+              <li><a href="/obras.html?setor=residencias-alto-padrao">Residências de alto padrão</a></li>
+              <li><a href="/obras.html?setor=fotovoltaicas">Fotovoltaicas</a></li>
+              <li><a href="/obras.html?setor=obras-industriais-de-infraestrutura-e-galpoes">Indústria e galpões</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <span>© <span data-year>2026</span> BPF Engenharia. Todos os direitos reservados.</span>
+          <span>*Mais de 400 obras — informação publicada no site atual.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
