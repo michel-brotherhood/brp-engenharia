@@ -14,6 +14,14 @@
   flex-direction: column;
 }
 
+/* Sub-page hero — curto, sem clareira em mobile */
+.hero.hero--sub {
+  min-height: max(340px, 40svh);
+}
+@media (min-width: 900px) {
+  .hero.hero--sub { min-height: 60svh; }
+}
+
 .hero__field {
   position: absolute;
   inset: 0;
@@ -85,9 +93,12 @@
 .hero__lead {
   font-size: var(--step-1);
   line-height: 1.5;
-  max-width: 46ch;
+  max-width: 100%;
   color: var(--c-graphite-200);
   margin-bottom: var(--sp-6);
+}
+@media (min-width: 640px) {
+  .hero__lead { max-width: 46ch; }
 }
 
 .hero__ctas {

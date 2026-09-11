@@ -1,3 +1,8 @@
+// Flip no-js → js as early as possible so the .reveal CSS knows JS is
+// alive. If JS never runs (or fails), CSS keeps content visible by default.
+document.documentElement.classList.remove('no-js');
+document.documentElement.classList.add('js');
+
 import './styles/main.css';
 import {
   paintHeroField,

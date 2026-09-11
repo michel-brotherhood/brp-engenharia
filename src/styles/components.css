@@ -72,12 +72,27 @@
 }
 .nav__cta:hover { transform: translateY(-2px); background: var(--accent-soft); }
 @media (min-width: 640px) { .nav__cta { display: inline-flex; } }
+.nav__actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nav__burger {
   display: inline-flex;
   width: 44px; height: 44px;
   align-items: center; justify-content: center;
-  border: 1px solid var(--rule-dark);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(15, 26, 49, 0.55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   border-radius: 2px;
+  transition: background var(--dur-1), border-color var(--dur-1);
+}
+.nav__burger:hover {
+  background: rgba(15, 26, 49, 0.85);
+  border-color: rgba(255, 255, 255, 0.55);
 }
 .nav__burger span {
   display: block; width: 18px; height: 1.4px; background: currentColor;
@@ -601,10 +616,10 @@
 .field .err-msg { color: var(--danger); font-size: var(--step--1); }
 
 .form-row {
-  display: grid; gap: var(--sp-4);
+  display: grid; gap: var(--sp-3);
   grid-template-columns: 1fr;
 }
-@media (min-width: 720px) { .form-row { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 720px) { .form-row { gap: var(--sp-4); grid-template-columns: 1fr 1fr; } }
 
 .form-note {
   padding: var(--sp-4);
@@ -710,8 +725,11 @@
    com o SVG (o hero-field não recebe imagem via injectImage). */
 
 /* Reveal (motion) */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-out); }
+/* Reveal só zera opacidade quando JS está confirmado (main.js troca no-js → js).
+   Sem JS ou se IO travar, .reveal fica visível por padrão — nada some. */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity var(--dur-3) var(--ease-out), transform var(--dur-3) var(--ease-out); }
 .reveal.is-in { opacity: 1; transform: translateY(0); }
+.no-js .reveal { opacity: 1 !important; transform: none !important; }
 
 /* Lightbox */
 .lightbox {
